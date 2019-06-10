@@ -1,0 +1,27 @@
+{% include "header.html" %}
+<h1 class="header">Insert New Product Item</h1>
+<form action="{{url_for('newItem')}}"
+  method="POST">
+  <p>Name:</p>
+  <input type="text" size="30" name="name">
+  <p>description:</p>
+  <input type="text" size="30" name="description">
+  <p>Product Category</p>
+  <select name="categories_id">
+    <option value=1 >mobile</option>
+    <option value=2 >notebook</option>
+    <option value=3 >tablet</option>
+    <option value=4 >musicplayer</option>
+    <option value=5 >desktop</option>
+    <option value=6 >storage</option>
+    <option value=7 >dslr</option>
+    <option value=8 >mirrorless</option>
+    <option value=9 >gaming</option>
+  </select>
+  </br></br>
+  <input type="submit" value ="Create">
+  <a href = "{{url_for('showCatalog')}}"><button type="button">Cancel</button></a>
+  </br></br>
+</form>
+</body>
+</html>
